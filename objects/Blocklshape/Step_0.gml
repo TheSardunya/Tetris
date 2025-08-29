@@ -45,11 +45,10 @@ for(var i = blocklR4Var.y; i > 0; i -= 32)
             if (pos1 != noone || pos2 != noone || pos3 != noone || pos4 != noone)
             {
                 var diff = 0;
-                if(pos1 != noone && pos1.y > blockl4Var.y){diff = blocklR4Var.y - pos1.y;}
-                else if(pos2 != noone && pos2.y > blockl4Var.y){diff = blocklR4Var.y - pos2.y;}
+                if(pos4 != noone && pos4.y > blockl4Var.y){diff = blocklR4Var.y - pos4.y; }
                 else if(pos3 != noone && pos3.y > blockl4Var.y){diff = blocklR4Var.y - pos3.y;}
-                else if(pos4 != noone && pos4.y > blockl4Var.y){diff = blocklR4Var.y - pos4.y;}
-
+                else if(pos2 != noone && pos2.y > blockl4Var.y){diff = blocklR4Var.y - pos2.y;}
+                else if(pos1 != noone && pos1.y > blockl4Var.y){diff = blocklR4Var.y - pos1.y; diff -= defaulted ? 32 : 0;}
                 blocklR4Var.y -= diff;
                 blocklR3Var.y -= diff;
                 blocklR2Var.y -= diff;
