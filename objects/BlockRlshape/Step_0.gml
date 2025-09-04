@@ -53,6 +53,13 @@ for(var i = blocklR4Var.y; i > 0; i -= 32)
                 blocklR3Var.y -= diff;
                 blocklR2Var.y -= diff;
                 blocklR1Var.y -= diff;
+                if(instance_position(blocklR4.x, blocklR4.y, Fallen) != noone || blocklR4Var.y > 800)
+                {
+                    blocklR4Var.y -= 32;
+                    blocklR3Var.y -= 32;
+                    blocklR2Var.y -= 32;
+                    blocklR1Var.y -= 32;
+                }
             }
         }
 if(keyboard_check_pressed(vk_right) && blockl1Var.x < 320 - 33 && !isLanded && !global.isPaused)
