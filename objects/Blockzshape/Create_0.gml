@@ -1,4 +1,6 @@
-alarm_set(0,60)
+global.tickSpd0 -= global.tickSpd0 > 8 ? 2 : 0;
+global.tickSpd1 -= global.tickSpd1 > 5 ? 2 : 0;
+alarm_set(0,global.tickSpd0)
 blockl1Var = instance_create_layer(208, 48, "Instances", blockl1);
 blockl2Var = instance_create_layer(144, 16, "Instances", blockl2);
 blockl3Var = instance_create_layer(176, 16, "Instances", blockl3);

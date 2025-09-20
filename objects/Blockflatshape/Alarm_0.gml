@@ -89,4 +89,4 @@ else
         }
     instance_destroy(self);
 }
-alarm_set(0, 60)
+alarm_set(0, global.tickSpd0);
